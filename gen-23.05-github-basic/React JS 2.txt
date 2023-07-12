@@ -1,0 +1,49 @@
+Git
+	Git adalah salah satu sistem pengontrol versi (Version Control System) pada proyek 
+	perangkat lunak yang diciptakan oleh Linus Torvalds. Pengontrol versi bertugas mencatat 
+	setiap perubahan pada file proyek yang dikerjakan oleh banyak orang maupun sendiri.
+
+Github
+	GitHub adalah layanan hos web bersama untuk proyek pengembangan perangkat lunak yang
+	menggunakan sistem kendali versi Git dan layanan hosting internet
+
+  Repository
+	1. Create new -> new Repository
+	2. bikin nama repository, deskripsi dan klik create
+	Pada repository dapat ditambahkan folder atau file, setelah dibuat folder atau 
+	file tersebut dapat di edit kembali
+	Clone
+	1. Download Zip
+	2. Gunakan URL menggunakan terminal
+		a. buka terminal/cmd -> ketikan git clone dan paste url yg dicopy
+		b. jika ingin di ubah nama filenya bisa tambahkan setelah url
+  Push / Upload
+	1. buka cmd -> ketik 'git add .'
+	2. ketik 'git commit -m "tambahan local"' <-- 'tambahan local' merupakan massage -->
+	3. ketik 'git push origin master' <-- 'master' merupakan branchnya -->
+  Pull
+	buka cmd -> ketik 'git pull' 
+	untuk mengupdate data yang telah berubah di github ke local
+  Branch
+	pada github
+		klik brach -> new branch
+	terminal
+	1. git checkout -b baru <-- Membuat brach baru -->
+	2. git brach <-- Mengecek Brach pada repository -->
+	3. ketik 'git add .'
+	4. ketik 'git commit -m "Branch baru"'
+	5. ketik git push origin baru
+  Merge branch
+	1. klik compare and pull request
+	2. bandingkan file jika sesuai, klik pull request
+	3. klik merge pull request 
+	4. confirm merge dan delete brach yang telah di merge
+  Fork
+	1. cari repository yang ingin di fork
+	2. klik fork pada github dan tunggu hingga selesai
+	3. repository tersebut telah masuk ke repository kita
+  gitIgnore
+	1. buat file dengan type '.gitignore'
+	2. ketikkan dalam file tersebut nama dari file-file yang tidak 
+	   ingin di push pada github dan save
+	3. kemudian push perubahan tersebut
