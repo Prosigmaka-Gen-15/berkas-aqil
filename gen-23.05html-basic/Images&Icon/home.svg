@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>home</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-grid" opacity="0.800000012"></g>
+        <g transform="translate(3.000000, 2.000000)" id="Shape" stroke="#212121" stroke-width="1.6">
+            <path d="M0.877211877,7.33121336 C0.828494569,7.3691046 0.8,7.42736572 0.8,7.48908381 L0.8,18 C0.8,18.6627417 1.3372583,19.2 2,19.2 L16,19.2 C16.6627417,19.2 17.2,18.6627417 17.2,18 L17.2,7.48908381 C17.2,7.42736572 17.1715054,7.3691046 17.1227881,7.33121336 L9.12278812,1.10899114 C9.05056603,1.0528184 8.94943397,1.0528184 8.87721188,1.10899114 L0.877211877,7.33121336 Z"></path>
+            <polyline stroke-linecap="round" stroke-linejoin="round" points="6 19 6 9 12 9 12 19"></polyline>
+        </g>
+    </g>
+</svg>
