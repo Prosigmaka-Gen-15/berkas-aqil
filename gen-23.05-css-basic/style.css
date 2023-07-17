@@ -16,12 +16,14 @@ body{
   margin-bottom: 15px;
   border-style: solid;
   border-top: salmon;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .produk{
   border-style: groove;
   padding: 10px;
-  float: left;
   width: 200px;
   margin: 5px;
   border-width: 1px;
@@ -68,4 +70,3 @@ body{
   margin-left: 15px;
   color: red;
 }
-
