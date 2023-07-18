@@ -1,0 +1,35 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  nav{
+    height: 7rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  nav{
+    height: 7rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  nav{
+    height: 5rem;
+  }
+  
+  nav h3, nav a{
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+  }
+  
+  nav #search{
+    height: 25px;
+  }
+  
+  ul li{
+  margin: 0px 10px;
+				}
+}
+

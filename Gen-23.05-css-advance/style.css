@@ -1,0 +1,112 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: blue;
+  box-sizing: border-box;
+}
+
+nav{
+  height: 3rem;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 2rem;
+}
+
+nav a{
+  color : black;
+}
+
+ul li{
+  display: inline;
+  margin: 0px 5px;
+}
+
+nav #search{
+  width: 200px;
+  height: 20px;
+  border-style: solid;
+  border-radius: 7px;
+  border-color: #e5e5e5;
+} 
+
+nav button{
+  border-radius: 50%;
+}
+
+#daftarproduk{
+  background-color: ghostwhite;
+  padding: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#katalog{
+  margin: 15px;
+  border-style: solid;
+  border-top: salmon;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.produk{
+  position: relative;
+  border-style: groove;
+  overflow: hidden;
+  border-radius: 6px;
+  padding: 10px;
+  width: 200px;
+  margin: 15px;
+  border-width: 1px;
+}
+
+.produk img{
+  display: block;
+  width: 70%;
+  height: 100px;
+  display: block;
+  margin-top : 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+.produk p{
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 20px;
+}
+
+#kotaktombol{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tombol{
+  text-decoration: none;
+  border-radius: 7px;
+  padding: 7px;
+  width: 35%;
+  margin: 7.5px;
+  text-align: center;
+  color: white;
+}
+
+.tombol-Add{
+  background-color: crimson;
+}
+
+.tombol-Detail{
+  background-color: green;
+}
+
+#daftarproduk h2{
+  margin-left: 15px;
+  color: red;
+}
+
