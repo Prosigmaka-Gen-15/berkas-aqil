@@ -8,11 +8,12 @@
   .wrapper{
     width: 500px;
   }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 	nav{
-    width: 580px;
+    width: 600px;
     height: 220px;
   }
 
@@ -24,7 +25,8 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 	nav{
-    width: 698px
+    width: 750px;
+    height: 220px;
   }
 
   .wrapper{
@@ -35,16 +37,24 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   nav{
-    width: 922px
+    width: 950px;
+    height: 80px;
   }
 
   .wrapper{
-    width: 892px;
+    width: 920px;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-	
+	nav{
+    width: 1200px;
+    height: 80px;
+  }
+
+  .wrapper{
+    width: 1100px;
+  }
 }
 
