@@ -39,8 +39,8 @@
       <div class="flex flex-col gap-4 w-auto xl:w-2/4">
         <!-- Item Name -->
         <div>
-          <h1 class="text-3xl font-bold mb-3">Laptop-ASUS-terbaik-Zenbook-Pro-14-Duo-OLED</h1>
-          <h2 class="text-3xl font-semibold mb-6">Rp14.000.000</h2>
+          <h1 id="namaProduk" class="text-3xl font-bold mb-3">Laptop-ASUS-terbaik-Zenbook-Pro-14-Duo-OLED</h1>
+          <h2 id="hargaProduk" class="text-3xl font-semibold mb-6">Rp14.000.000</h2>
           <p class="text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam velit magnam voluptate eos nostrum optio similique corporis laudantium earum ullam quam eaque dolorem ratione reprehenderit, delectus dolores vel beatae pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe minus dolore non ratione. Tenetur, deleniti, atque corrupti incidunt amet ea in, officiis nihil officia mollitia eaque. Et modi expedita qui?</p>
         </div>
         <!-- Ram variant -->
@@ -63,9 +63,9 @@
         </div>
         <!-- Add Button -->
         <div class="flex flex-row items-center">
-          <button onclick="kurangPcs" class="border-solid border-2 border-r-0 px-4 py-2 text-xl font-bold rounded-l-xl">-</button>
-          <span type="text" class="border-solid border-t-2 border-b-2 px-4 py-2 text-lg font-bold justify-center">1</span>
-          <button onclick="tambahPcs" class="border-solid border-2 border-l-0 px-4 py-2 text-xl font-bold rounded-r-xl">+</button>
+          <button onclick="kurangPcs()" id="kurang" class="border-solid border-2 border-r-0 px-4 py-2 text-xl font-bold rounded-l-xl">-</button>
+          <input  id="pcs" type="text" class="border-solid border-t-2 border-b-2 px-4 py-2 w-14 text-center text-lg font-bold justify-center" value="1" readonly></input>
+          <button onclick="tambahPcs()" id="tambah" class="border-solid border-2 border-l-0 px-4 py-2 text-xl font-bold rounded-r-xl">+</button>
         </div>
         <div>
           <button class="border-solid border-2 px-6 py-2 font-bold text-lg rounded-xl bg-green-600 hover:bg-slate-500 hover:text-white transition-all duration-150">Add to Cart</button>
