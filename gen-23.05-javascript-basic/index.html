@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="dist/output.css" rel="stylesheet">
+  <title>Detail Produk</title>
+</head>
+<body>
+  <div class="container mx-auto">
+    <nav class="flex flex-col gap-4 md:gap-0 md:flex-row items-center justify-between bg-slate-400 my-0 p-3 border-b-4">
+      <div>
+        <a href="#" class="font-bold text-3xl mx-2">ShopCart</a>
+      </div>
+      <div>
+        <a href="#" class="font-bold text-xl mx-2">Home</a>
+        <a href="#" class="font-bold text-xl mx-2">Product</a>
+        <a href="#" class="font-bold text-xl mx-2">About Us</a>
+        <input type="text" class="mx-3 rounded p-1 mt-4 md:mt-0" placeholder="Search Product">
+      </div>
+      <div>
+        <a href="#" class="font-bold text-xl mx-2">Account</a>
+        <a href="#" class="font-bold text-xl mx-2">Cart</a>
+      </div>
+    </nav>
+
+    <section class="flex mt-10 flex-wrap justify-center px-4 md:px-0">
+      <!-- Item Images -->
+      <div class="flex flex-col justify-between w-auto gap-4 md:pr-7 mb-8">
+        <img src="dist/images/Laptop-ASUS-terbaik-Zenbook-Pro-14-Duo-OLED.jpg" id="previewImg" class="w-auto h-96 aspect-square bg-contain rounded-xl border-solid border-8 ">
+        <div class="flex flex-row max-w-[100vw] overflow-x-scroll md:overflow-hidden justify-between h-24 gap-3">
+          <img onclick="previewImage0()" src="dist/images/Laptop-ASUS-terbaik-Zenbook-Pro-14-Duo-OLED.jpg" class="miniImg w-32 h-26 rounded-md cursor-pointer border-solid border-4 hover:opacity-50 ">
+          <img onclick="previewImage1()" src="dist/images/Laptop-ASUS-Keluaran-Baru-Zenbook-14X-OLED-Space-Edition.jpg" class="miniImg w-32 h-26 rounded-md cursor-pointer border-solid border-4 hover:opacity-50">
+          <img onclick="previewImage2()" src="dist/images/Laptop-ASUS-Terbaru-Zenbook-S-13-OLED.jpg" class="miniImg w-32 h-26 rounded-md cursor-pointer border-solid border-4 hover:opacity-50">
+          <img onclick="previewImage3()" src="dist/images/Laptop-ASUS-Vivobook-14X-OLED-A1403-Terbaru-2022.jpg" class="miniImg w-32 h-26 rounded-md cursor-pointer border-solid border-4 hover:opacity-50">
+        </div>
+      </div>
+      <!-- Detail Item -->
+      <div class="flex flex-col gap-4 w-auto xl:w-2/4">
+        <!-- Item Name -->
+        <div>
+          <h1 class="text-3xl font-bold mb-3">Laptop-ASUS-terbaik-Zenbook-Pro-14-Duo-OLED</h1>
+          <h2 class="text-3xl font-semibold mb-6">Rp14.000.000</h2>
+          <p class="text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam velit magnam voluptate eos nostrum optio similique corporis laudantium earum ullam quam eaque dolorem ratione reprehenderit, delectus dolores vel beatae pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe minus dolore non ratione. Tenetur, deleniti, atque corrupti incidunt amet ea in, officiis nihil officia mollitia eaque. Et modi expedita qui?</p>
+        </div>
+        <!-- Ram variant -->
+        <div class="flex items-baseline">
+          <h3 class="text-xl font-bold mr-4">Ram</h3>
+          <div class="flex space-x-3 text-lg">
+            <label>
+              <input class="sr-only peer" name="ram" type="radio" value="8 GB">
+              <div class="w-16 h-10 font-semibold border-solid border-2 rounded-lg flex items-center justify-center peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">8 GB</div>
+            </label>
+            <label>
+              <input class="sr-only peer" name="ram" type="radio" value="8 GB">
+              <div class="w-16 h-10 font-semibold border-solid border-2 rounded-lg flex items-center justify-center peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">16 GB</div>
+            </label>
+            <label>
+              <input class="sr-only peer" name="ram" type="radio" value="8 GB">
+              <div class="w-16 h-10 font-semibold border-solid border-2 rounded-lg flex items-center justify-center peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">32 GB</div>
+            </label>
+          </div>
+        </div>
+        <!-- Add Button -->
+        <div class="flex flex-row items-center">
+          <button onclick="kurangPcs" class="border-solid border-2 border-r-0 px-4 py-2 text-xl font-bold rounded-l-xl">-</button>
+          <span type="text" class="border-solid border-t-2 border-b-2 px-4 py-2 text-lg font-bold justify-center">1</span>
+          <button onclick="tambahPcs" class="border-solid border-2 border-l-0 px-4 py-2 text-xl font-bold rounded-r-xl">+</button>
+        </div>
+        <div>
+          <button class="border-solid border-2 px-6 py-2 font-bold text-lg rounded-xl bg-green-600 hover:bg-slate-500 hover:text-white transition-all duration-150">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- JavaScript -->
+  <script src="dist/interaktif.js"></script>
+</body>
