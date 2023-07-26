@@ -47,18 +47,9 @@
         <div class="flex items-baseline">
           <h3 class="text-xl font-bold mr-4">Ram</h3>
           <div class="flex space-x-3 text-lg">
-            <label>
-              <input class="sr-only peer" name="ram" type="radio" value="8 GB">
-              <div class="w-16 h-10 font-semibold border-solid border-2 rounded-lg flex items-center justify-center peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">8 GB</div>
-            </label>
-            <label>
-              <input class="sr-only peer" name="ram" type="radio" value="8 GB">
-              <div class="w-16 h-10 font-semibold border-solid border-2 rounded-lg flex items-center justify-center peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">16 GB</div>
-            </label>
-            <label>
-              <input class="sr-only peer" name="ram" type="radio" value="8 GB">
-              <div class="w-16 h-10 font-semibold border-solid border-2 rounded-lg flex items-center justify-center peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">32 GB</div>
-            </label>
+              <div onclick="variationChoice()" value="8gb" class="ram w-16 h-10 font-semibold border-solid border-2 rounded-lg flex items-center justify-center hover:bg-slate-900 hover:text-white cursor-pointer">8 GB</div>
+              <div onclick="variationChoice()" value="16gb" class="ram w-16 h-10 font-semibold border-solid border-2 rounded-lg flex items-center justify-center hover:bg-slate-900 hover:text-white cursor-pointer">16 GB</div>
+              <div onclick="variationChoice()" value="32gb" class="ram w-16 h-10 font-semibold border-solid border-2 rounded-lg flex items-center justify-center hover:bg-slate-900 hover:text-white cursor-pointer">32 GB</div>
           </div>
         </div>
         <!-- Add Button -->

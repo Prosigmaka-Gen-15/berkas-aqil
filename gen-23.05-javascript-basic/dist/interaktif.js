@@ -1,3 +1,4 @@
+// Preview Image
 var previewImg = document.getElementById('previewImg');
 var miniImg = document.getElementsByClassName('miniImg');
 var namaProduk = document.getElementById('namaProduk');
@@ -31,6 +32,7 @@ function previewImage3(){
     hargaProduk.innerHTML = "Rp17.000.000";
 }
 
+// Tambah dan kurang barang
 function tambahPcs(){
     var jumlahPcs = parseInt(document.getElementById('pcs').getAttribute("value"));
     if(jumlahPcs < 99){
@@ -45,4 +47,9 @@ function kurangPcs(){
         var total = jumlahPcs - 1;
         document.getElementById('pcs').setAttribute("value", total);
     }
+}
+
+// RAM 
+function variationChoice(){
+    
 }
