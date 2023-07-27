@@ -14,7 +14,7 @@ const mobil = {
 	tipe: "Avanza"
 }
 
-const { merk, tipe } = mobil
+const { merk, tipe } = mobil // object destructure
 
-console.log(merk)
-console.log(tipe)
+// console.log(merk)
+// console.log(tipe)
