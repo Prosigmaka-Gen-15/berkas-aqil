@@ -9,6 +9,5 @@ function ItemProduk(props){
         <Button className="bg-green-500 hover:bg-green-700">Add to Cart</Button>
     </div>
     )
- 
 }
 export default ItemProduk;

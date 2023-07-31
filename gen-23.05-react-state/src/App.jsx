@@ -10,7 +10,6 @@ function App() {
         <PreviewImage></PreviewImage>
         <DetailItem />
       </div>
-      
     </>
   )
 }
