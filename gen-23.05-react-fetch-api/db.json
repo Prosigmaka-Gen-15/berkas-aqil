@@ -1,0 +1,34 @@
+{
+    "laptop": [
+        {
+            "id": 1,
+            "nama": "Asus Vivobook 14x M1403",
+            "harga": "Rp8.500.000",
+            "gambar": "/images/1.png"
+        },
+        {
+            "id": 2,
+            "nama": "Asus Vivobook S14x OLED",
+            "harga": "Rp12.500.000",
+            "gambar": "/images/Asus-Vivobook-S14.png"
+        },
+        {
+            "id": 3,
+            "nama": "Asus Vivobook S14 Flip",
+            "harga": "Rp13.800.000",
+            "gambar": "/images/Asus-Vivobook-S14-Flip.png"
+        },
+        {
+            "id": 4,
+            "nama": "Asus Zenbook 14 UM425UA",
+            "harga": "Rp10.200.000",
+            "gambar": "/images/Zenbook-14-(UM425UA)-1.png"
+        },
+        {
+            "id": 5,
+            "nama": "Asus Zenbook 14 Ultralight UX435",
+            "harga": "Rp18.999.000",
+            "gambar": "/images/Zenbook-14-Ultralight-UX435-1.png"
+        }
+    ]
+}
