@@ -1,11 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Header from '../component/Header';
 import ItemProduk from '../component/ItemProduk';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Home = () => {
+  //hopscotch sejenis thunder client
   const [laptops, setLaptops]=useState([]);
+  const navigate =useNavigate([])
 
   const getLaptops = async () => {
     try{
@@ -19,6 +21,10 @@ const Home = () => {
   useEffect(()=>{
     getLaptops();
   }, [])
+
+  const handleGoToDetail = (id) => {
+    navigate(`/${id}`)
+  }
   
   return(
     <>
@@ -28,15 +34,10 @@ const Home = () => {
           {
             laptops.map((laptop, index) => {
               return(
-                <Link key={index} to={laptop.id}><ItemProduk image={laptop.gambar} namaproduk={laptop.nama} hargaproduk={laptop.harga}/></Link>
+                <ItemProduk key={index} onClick={()=>{handleGoToDetail(laptop.id)}} image={laptop.gambar} namaproduk={laptop.nama} hargaproduk={laptop.harga} />
               )
             })
           }
-          {/* <Link to="/1"><ItemProduk image="/images/1.png" namaproduk="Asus Vivobook 14x M1403QA VIPS551" hargaproduk="Rp8.500.000"/></Link>
-          <Link to="/2"><ItemProduk image="/images/2.png" namaproduk="Asus Vivobook 14x M1403QA VIPS551" hargaproduk="Rp8.500.000"/></Link>
-          <Link to="/3"><ItemProduk image="/images/3.png" namaproduk="Asus Vivobook 14x M1403QA VIPS551" hargaproduk="Rp8.500.000"/></Link>
-          <Link to="/4"><ItemProduk image="/images/4.png" namaproduk="Asus Vivobook 14x M1403QA VIPS551" hargaproduk="Rp8.500.000"/></Link>
-          <Link to="/5"><ItemProduk image="/images/1.png" namaproduk="Asus Vivobook 14x M1403QA VIPS551" hargaproduk="Rp8.500.000"/></Link> */}
         </section>
       </div>
     </>
