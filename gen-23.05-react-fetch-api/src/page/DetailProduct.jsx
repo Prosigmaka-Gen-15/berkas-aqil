@@ -8,8 +8,8 @@ import axios from "axios";
 
 const DetailProduct = () => {
     const {id} = useParams();
-    const [laptop, setLaptop] = useState([])
-    
+    const [laptop, setLaptop] = useState({})
+
     const getLaptop = async () => {
         try{
           let response = await axios.get(`http://localhost:3000/laptop/${id}`);
@@ -37,9 +37,9 @@ const DetailProduct = () => {
                     </>}
                 />
                 <DetailItem
-                    namaproduk={laptop.nama} 
+                    namaproduk={laptop.nama}
                     hargaproduk={laptop.harga}
-                    penjelasanproduk="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea iusto laboriosam quasi quas corporis ipsum, ut quisquam ullam, dolor repellendus, similique eaque nulla ipsam provident est saepe perferendis? Praesentium, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea iusto laboriosam quasi quas corporis ipsum, ut quisquam ullam, dolor repellendus, similique eaque nulla ipsam provident est saepe perferendis? Praesentium, quos." 
+                    penjelasanproduk="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea iusto laboriosam quasi quas corporis ipsum, ut quisquam ullam, dolor repellendus, similique eaque nulla ipsam provident est saepe perferendis? Praesentium, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea iusto laboriosam quasi quas corporis ipsum, ut quisquam ullam, dolor repellendus, similique eaque nulla ipsam provident est saepe perferendis? Praesentium, quos."
                     variant={<>
                         <Button.Variant>8GB</Button.Variant>
                         <Button.Variant>16GB</Button.Variant>

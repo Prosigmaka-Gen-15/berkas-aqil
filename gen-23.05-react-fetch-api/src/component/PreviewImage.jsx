@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
 
-function PreviewImage(props){  
+function PreviewImage(props){
 
-    function getImgUrl(name) {
-        return new URL(`${name}`, import.meta.url).href;
-    }
+    // function getImgUrl(name) {
+    //     return new URL(`${name}`, import.meta.url).href;
+    // }
 
     const {sourcePreview, sourceMini} = props;
 
@@ -13,12 +13,12 @@ function PreviewImage(props){
 
     function MiniImg(props){
         const {handleclick} = props;
-        return <img {...props} onClick={() => setSource(getImgUrl(handleclick))} className=" px-2 w-26 h-26 rounded-md cursor-pointer border-solid border-4 hover:opacity-50 " />
+        return <img {...props} onClick={() => setSource(handleclick)} className=" px-2 w-26 h-26 rounded-md cursor-pointer border-solid border-4 hover:opacity-50 " />
     }
     PreviewImage.MiniImg = MiniImg;
 
     useEffect(() => {
-        setSource(getImgUrl(sourcePreview));
+        setSource(sourcePreview);
       }, [sourcePreview]);
 
     return(
