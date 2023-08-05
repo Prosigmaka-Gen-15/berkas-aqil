@@ -27,9 +27,8 @@ export default function FormAddProduct() {
     <div className="container bg-sky-500 ">
         <div className="border-2 p-4">
             <form onSubmit={submit}>
-                <div>
-                    <p>Nama : {form.nama}</p>
-                    <p>Merk : {form.merk}</p>
+                <div className="mb-7">
+                    <h1 className="text-3xl font-bold underline">Add Product</h1>
                 </div>
                 <div className="mb-6">
                     <label className="block" htmlFor="nama">Nama Laptop</label>

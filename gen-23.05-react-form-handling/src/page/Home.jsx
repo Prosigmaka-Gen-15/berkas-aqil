@@ -1,4 +1,5 @@
 import FormAddProduct from '../component/FormAddProduct';
+import FormAddProductYup from '../component/FormAddProductYup';
 import NavBar from '../component/NavBar';
 
 
@@ -8,7 +9,7 @@ const Home = () => {
     <>
       <div className='flex flex-row'>
         <NavBar/>
-        <FormAddProduct/>
+        <FormAddProductYup/>
       </div>
       
     </>

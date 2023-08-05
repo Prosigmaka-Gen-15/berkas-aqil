@@ -8,8 +8,8 @@ function NavBar(){
           <A className="text-2xl ">ShopCart</A> 
         </div>
         <div className="flex flex-col gap-5 mt-10">
-          <A>Home</A>
           <A>Product</A>
+          <A>Add Product</A>
           <A>About Us</A>
         </div>
       </nav>
