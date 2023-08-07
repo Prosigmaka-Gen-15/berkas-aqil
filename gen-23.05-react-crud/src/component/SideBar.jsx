@@ -2,12 +2,16 @@ import { Link } from "react-router-dom";
 import { BsShopWindow, BsBagPlus } from 'react-icons/bs';
 import { FaProductHunt } from 'react-icons/fa';
 import { FcAbout } from 'react-icons/fc';
+import { MdAccountCircle } from 'react-icons/md';
+import { AiFillSetting } from "react-icons/ai";
 
 function SideBar(){
     const menu =[
+      {name:'Account', icon:<MdAccountCircle/>},
       {name:'Product', icon:<FaProductHunt/>},
       {name:'Add Product', icon:<BsBagPlus/>},
-      {name:'About Us', icon:<FcAbout/>}
+      {name:'About Us', icon:<FcAbout/>},
+      {name:'Setting', icon:<AiFillSetting/>}
     ];
 
     return(

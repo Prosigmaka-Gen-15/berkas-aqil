@@ -1,19 +1,19 @@
 import FormAddProduct from '../component/FormAddProduct';
-import FormAddProductYup from '../component/FormAddProductYup';
+import ListProduk from '../component/ListProduk';
 import SideBar from '../component/SideBar';
 
 
 
-const Home = () => {
+const Admin = () => {
   return(
     <>
       <div className='flex flex-row'>
         <SideBar/>
-        <FormAddProductYup/>
+        <ListProduk/>
       </div>
       
     </>
   )
 }
 
-export default Home;
+export default Admin;

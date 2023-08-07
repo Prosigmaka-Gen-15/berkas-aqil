@@ -26,7 +26,7 @@ function DetailItem(props){
         <div className="flex flex-col gap-4 w-auto xl:w-2/4">
             <div>
                 <h1 className="text-3xl font-bold mb-3">{namaproduk}</h1>
-                <h2 className="text-3xl font-semibold mb-6">{hargaproduk}</h2>
+                <h2 className="text-3xl font-semibold mb-6">Rp{hargaproduk}</h2>
                 <p className="text-lg">{penjelasanproduk}</p>
             </div>
             <div className="flex items-baseline">
