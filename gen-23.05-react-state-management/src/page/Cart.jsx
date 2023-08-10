@@ -1,35 +1,25 @@
 import React, { useState } from 'react';
 import Header from '../component/Header';
 import Button from '../component/Button';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import FooterCart from '../component/FooterCart';
+import {
+    DecreaseAmount,
+    deleteItemCart,
+    increaseAmount,
+} from '../store/cartSlice';
 
 export default function Cart() {
     const carts = useSelector((state) => state.carts);
+    const dispatch = useDispatch();
 
-    const [count, setCount] = useState(1);
-    function countPlus() {
-        if (count == 99) {
-            setCount(count);
-        } else {
-            setCount(count + 1);
-        }
-    }
-
-    function countMin() {
-        if (count == 1) {
-            setCount(count);
-        } else {
-            setCount(count - 1);
-        }
-    }
     return (
         <>
             <Header />
             <div className='container mx-auto'>
                 {/* CARD */}
-                {carts.map((cart) => (
-                    <div className='m-4 flex justify-center'>
+                {carts.map((cart, index) => (
+                    <div className='m-4 flex justify-center' key={index}>
                         <div className='w-9/12 border-r border-b border-l rounded-xl border-gray-400 bg-slate-400 p-4 flex flex-col justify-between leading-normal'>
                             <div className='flex items-center justify-between'>
                                 <div className='flex  gap-5 items-center'>
@@ -43,12 +33,24 @@ export default function Cart() {
                                         </h4>
                                     </div>
                                 </div>
-                                <div className='items-end'>
+                                <div className='flex flex-col gap-4 items-end'>
                                     <Button.PlusMinusButton
-                                        minusClick={countMin}
-                                        plusClick={countPlus}
-                                        value={count}
+                                        minusClick={() => {
+                                            dispatch(DecreaseAmount(index));
+                                        }}
+                                        plusClick={() => {
+                                            dispatch(increaseAmount(index));
+                                        }}
+                                        value={cart.amount}
                                     />
+                                    <Button
+                                        className='text-xl w-32 bg-white'
+                                        onClick={() => {
+                                            dispatch(deleteItemCart(index));
+                                        }}
+                                    >
+                                        Remove
+                                    </Button>
                                 </div>
                             </div>
                         </div>

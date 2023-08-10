@@ -4,7 +4,7 @@ import { Await, Link, useNavigate } from 'react-router-dom';
 import { AiTwotoneEdit } from 'react-icons/ai';
 import { MdDelete } from 'react-icons/md';
 import { IoAddCircle } from 'react-icons/io5';
-import Button from './Button';
+import Button from '../Button';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';

@@ -1,6 +1,6 @@
-import FormAddProduct from '../component/FormAddProduct';
-import ListProduk from '../component/ListProduk';
-import SideBar from '../component/SideBar';
+import FormAddProduct from '../component/Admin/FormAddProduct';
+import ListProduk from '../component/Admin/ListProduk';
+import SideBar from '../component/Admin/SideBar';
 
 const Admin = () => {
     return (

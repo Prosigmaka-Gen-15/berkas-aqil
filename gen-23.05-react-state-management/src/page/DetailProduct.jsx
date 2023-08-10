@@ -1,14 +1,28 @@
 import { useParams } from 'react-router-dom';
 import Button from '../component/Button';
-import DetailItem from '../component/DetailItem';
+import DetailItem from '../component/DetailProduct/DetailItem';
 import Header from '../component/Header';
-import PreviewImage from '../component/PreviewImage';
+import PreviewImage from '../component/DetailProduct/PreviewImage';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../store/cartSlice';
 
 const DetailProduct = () => {
     const { id } = useParams();
     const [laptop, setLaptop] = useState({});
+    const dispatch = useDispatch();
+
+    const handleAddToCart = () => {
+        const data = {
+            nama: laptop.nama,
+            harga: laptop.harga,
+            gambar: laptop.gambar,
+            amount: 1,
+        };
+        alert('Berhasil ditambah ke Cart');
+        dispatch(addToCart(data));
+    };
 
     const getLaptop = async () => {
         try {
@@ -63,6 +77,7 @@ const DetailProduct = () => {
                             <Button.Variant>24GB</Button.Variant>
                         </>
                     }
+                    handleclick={handleAddToCart}
                 />
             </div>
         </>

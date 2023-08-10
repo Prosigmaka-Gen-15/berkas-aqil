@@ -3,9 +3,9 @@ import Home from './page/Home';
 import DetailProduct from './page/DetailProduct';
 import AboutUs from './page/AboutUs';
 import Admin from './page/Admin';
-import AddProduct from './page/AddProduct';
-import UpdateProduct from './page/UpdateProduct';
 import Cart from './page/Cart';
+import AdminAddProduct from './page/AdminAddProduct';
+import AdminUpdateProduct from './page/AdminUpdateProduct';
 
 function App() {
     return (
@@ -16,10 +16,10 @@ function App() {
                 <Route path='/about-us' element={<AboutUs />} />
                 <Route path='/cart' element={<Cart />} />
                 <Route path='/admin' element={<Admin />} />
-                <Route path='/admin/addproduct' element={<AddProduct />} />
+                <Route path='/admin/addproduct' element={<AdminAddProduct />} />
                 <Route
                     path='/admin/updateproduct/:id'
-                    element={<UpdateProduct />}
+                    element={<AdminUpdateProduct />}
                 />
             </Routes>
         </BrowserRouter>

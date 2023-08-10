@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import Button from './Button';
+import Button from '../Button';
 
 function DetailItem(props) {
-    const { namaproduk, hargaproduk, penjelasanproduk, variant } = props;
+    const { namaproduk, hargaproduk, penjelasanproduk, variant, handleclick } =
+        props;
 
     // Tambah dna Kurang Item
     const [count, setCount] = useState(1);
@@ -39,7 +40,10 @@ function DetailItem(props) {
                 value={count}
             />
             <div>
-                <Button className='text-xl px-6 py-2 bg-green-600 hover:bg-slate-500 hover:text-white transition-all duration-150'>
+                <Button
+                    onClick={handleclick}
+                    className='text-xl px-6 py-2 bg-green-600 hover:bg-slate-500 hover:text-white transition-all duration-150'
+                >
                     Add to Cart
                 </Button>
             </div>

@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import Header from '../component/Header';
-import ItemProduk from '../component/ItemProduk';
+import ItemProduk from '../component/Home/ItemProduk';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
