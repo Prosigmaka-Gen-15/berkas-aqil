@@ -2,26 +2,42 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice =createSlice({
     name: 'cart',
-    initialState: [],
+    initialState: {cartItems: []},
     reducers:{
         addToCart (state, action){
-            state.push(action.payload)
+            const existingItem = state.cartItems.find((item) => item.id === action.payload.id)
+            if(existingItem){
+                existingItem.amount += action.payload.amount;
+            }else{
+                state.cartItems.push(action.payload)  
+            }                   
         },
         deleteItemCart(state, action){
             // selain filter untuk mendelete bisa menggunakan "splice"  
-            const hasilFilter = state.filter( (cart, index) => {
-                return index !== action.payload
+            const hasilFilter = state.cartItems.filter( (item) => {
+                return item.id !== action.payload
             })
-            return hasilFilter
+            state.cartItems = hasilFilter
         },
         increaseAmount(state, action){
-            state[action.payload].amount++
+            // pakai id
+            const findId = state.cartItems.find((item) =>  item.id === action.payload)
+            if(findId && (findId.amount < 99)){findId.amount++}
+
+            //pakai index
+            // state.cartItems[action.payload].amount++
         },
         DecreaseAmount(state, action){
-            if(state[action.payload].amount >1){
-                state[action.payload].amount--
-            }
-            state[action.payload].amount
+            //pakai id
+            const findId = state.cartItems.find((item) =>  item.id === action.payload)
+            if(findId && (findId.amount > 1)){findId.amount--}
+
+            //pakai index
+            // if(state.cartItems[action.payload].amount >1){
+            //     state.cartItems[action.payload].amount--
+            // }else{
+            //     state.cartItems[action.payload].amount
+            // }
         }
     }
 })

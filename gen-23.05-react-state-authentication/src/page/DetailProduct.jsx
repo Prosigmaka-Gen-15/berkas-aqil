@@ -14,20 +14,24 @@ const DetailProduct = () => {
     const [laptop, setLaptop] = useState({});
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [amount, setAmount] = useState(1);
+
+    const data = {
+        id: laptop.id,
+        nama: laptop.nama,
+        harga: laptop.harga,
+        gambar: laptop.gambar,
+        amount: amount,
+    };
 
     const handleAddToCart = () => {
         if (token !== '') {
-            const data = {
-                nama: laptop.nama,
-                harga: laptop.harga,
-                gambar: laptop.gambar,
-                amount: 1,
-            };
             alert('Berhasil ditambah ke Cart');
             dispatch(addToCart(data));
+        } else {
+            alert('Silahkan Login Terlebih Dahulu');
+            navigate('/login');
         }
-        alert('Silahkan Login Terlebih Dahulu');
-        navigate('/login');
     };
 
     const getLaptop = async () => {
@@ -38,6 +42,18 @@ const DetailProduct = () => {
             setLaptop(response.data);
         } catch (err) {
             console.log(err);
+        }
+    };
+
+    const minusAmount = () => {
+        if (amount > 1) {
+            setAmount(amount - 1);
+        }
+    };
+
+    const plusAmount = () => {
+        if (amount < 99) {
+            setAmount(amount + 1);
         }
     };
 
@@ -72,20 +88,66 @@ const DetailProduct = () => {
                         </>
                     }
                 />
-                <DetailItem
-                    namaproduk={laptop.nama}
-                    hargaproduk={laptop.harga}
-                    penjelasanproduk='Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea iusto laboriosam quasi quas corporis ipsum, ut quisquam ullam, dolor repellendus, similique eaque nulla ipsam provident est saepe perferendis? Praesentium, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea iusto laboriosam quasi quas corporis ipsum, ut quisquam ullam, dolor repellendus, similique eaque nulla ipsam provident est saepe perferendis? Praesentium, quos.'
-                    variant={
-                        <>
+                <div className='flex flex-col gap-4 w-auto xl:w-2/4'>
+                    <div>
+                        <h1 className='text-3xl font-bold mb-3'>
+                            {laptop.nama}
+                        </h1>
+                        <h2 className='text-3xl font-semibold mb-6'>
+                            Rp{laptop.harga}
+                        </h2>
+                        <p className='text-lg'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Rerum odio consectetur, dolorum, voluptatem
+                            optio, enim exercitationem nemo officia dolore eaque
+                            nulla facere quo impedit voluptatibus accusamus at
+                            placeat nisi in! Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Officia, ab, adipisci
+                            beatae accusantium quisquam, officiis repellat
+                            architecto laborum quibusdam quas facilis quos
+                            aliquam veritatis. Consequatur reiciendis aliquid
+                            ullam voluptas deleniti!
+                        </p>
+                    </div>
+                    <div className='flex items-baseline'>
+                        <h3 className='text-xl font-bold mr-4'>Ram</h3>
+                        <div className='flex space-x-3 text-lg'>
                             <Button.Variant>8GB</Button.Variant>
                             <Button.Variant>16GB</Button.Variant>
                             <Button.Variant>24GB</Button.Variant>
-                        </>
-                    }
-                    handleclick={handleAddToCart}
-                />
+                        </div>
+                    </div>
+                    <Button.PlusMinusButton
+                        minusClick={minusAmount}
+                        plusClick={plusAmount}
+                        value={amount}
+                    />
+                    <div>
+                        <Button
+                            onClick={handleAddToCart}
+                            className='text-xl px-6 py-2 bg-green-600 hover:bg-slate-500 hover:text-white transition-all duration-150'
+                        >
+                            Add to Cart
+                        </Button>
+                    </div>
+                </div>
             </div>
+            {/* tidak dipakai */}
+            {/* <DetailItem
+                id={laptop.id}
+                namaproduk={laptop.nama}
+                hargaproduk={laptop.harga}
+                penjelasanproduk='Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea iusto laboriosam quasi quas corporis ipsum, ut quisquam ullam, dolor repellendus, similique eaque nulla ipsam provident est saepe perferendis? Praesentium, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea iusto laboriosam quasi quas corporis ipsum, ut quisquam ullam, dolor repellendus, similique eaque nulla ipsam provident est saepe perferendis? Praesentium, quos.'
+                variant={
+                    <>
+                        <Button.Variant>8GB</Button.Variant>
+                        <Button.Variant>16GB</Button.Variant>
+                        <Button.Variant>24GB</Button.Variant>
+                    </>
+                }
+                value={data.amount}
+                handleclick={handleAddToCart}
+            /> */}
         </>
     );
 };

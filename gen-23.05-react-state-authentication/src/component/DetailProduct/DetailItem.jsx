@@ -1,27 +1,35 @@
 import { useState } from 'react';
 import Button from '../Button';
+import { DecreaseAmount, increaseAmount } from '../../store/cartSlice';
+import { useDispatch } from 'react-redux';
 
 function DetailItem(props) {
-    const { namaproduk, hargaproduk, penjelasanproduk, variant, handleclick } =
-        props;
+    const {
+        id,
+        namaproduk,
+        hargaproduk,
+        penjelasanproduk,
+        variant,
+        handleclick,
+        value,
+    } = props;
 
-    // Tambah dna Kurang Item
-    const [count, setCount] = useState(1);
-    function countPlus() {
-        if (count == 99) {
-            setCount(count);
-        } else {
-            setCount(count + 1);
-        }
-    }
+    const dispatch = useDispatch();
+    const [amount, setAmount] = useState(value);
 
-    function countMin() {
-        if (count == 1) {
-            setCount(count);
-        } else {
-            setCount(count - 1);
+    const minusAmount = () => {
+        if (amount > 1) {
+            setAmount(amount - 1);
+            return value(amount);
         }
-    }
+    };
+
+    const plusAmount = () => {
+        if (amount < 99) {
+            setAmount(amount + 1);
+            return value(amount);
+        }
+    };
 
     return (
         <div className='flex flex-col gap-4 w-auto xl:w-2/4'>
@@ -35,9 +43,9 @@ function DetailItem(props) {
                 <div className='flex space-x-3 text-lg'>{variant}</div>
             </div>
             <Button.PlusMinusButton
-                minusClick={countMin}
-                plusClick={countPlus}
-                value={count}
+                minusClick={minusAmount}
+                plusClick={plusAmount}
+                value={amount}
             />
             <div>
                 <Button

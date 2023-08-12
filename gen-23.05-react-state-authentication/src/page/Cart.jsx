@@ -10,13 +10,13 @@ import {
 } from '../store/cartSlice';
 
 export default function Cart() {
-    const carts = useSelector((state) => state.carts);
+    const carts = useSelector((state) => state.carts.cartItems);
     const dispatch = useDispatch();
 
     return (
-        <>
+        <div className='flex flex-col h-screen justify-between'>
             <Header />
-            <div className='container mx-auto'>
+            <div className='container mx-auto mb-auto'>
                 {/* CARD */}
                 {carts.map((cart, index) => (
                     <div className='m-4 flex justify-center' key={index}>
@@ -29,24 +29,24 @@ export default function Cart() {
                                             {cart.nama}
                                         </h3>
                                         <h4 className='text-xl font-bold text-red-800'>
-                                            {cart.harga}
+                                            Rp{cart.harga * cart.amount}
                                         </h4>
                                     </div>
                                 </div>
                                 <div className='flex flex-col gap-4 items-end'>
                                     <Button.PlusMinusButton
                                         minusClick={() => {
-                                            dispatch(DecreaseAmount(index));
+                                            dispatch(DecreaseAmount(cart.id));
                                         }}
                                         plusClick={() => {
-                                            dispatch(increaseAmount(index));
+                                            dispatch(increaseAmount(cart.id));
                                         }}
                                         value={cart.amount}
                                     />
                                     <Button
                                         className='text-xl w-32 bg-white'
                                         onClick={() => {
-                                            dispatch(deleteItemCart(index));
+                                            dispatch(deleteItemCart(cart.id));
                                         }}
                                     >
                                         Remove
@@ -59,6 +59,6 @@ export default function Cart() {
                 {/* END CARD */}
             </div>
             <FooterCart />
-        </>
+        </div>
     );
 }

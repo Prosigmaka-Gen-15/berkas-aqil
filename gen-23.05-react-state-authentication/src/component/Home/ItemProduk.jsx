@@ -2,27 +2,33 @@ import Button from '../Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../../store/cartSlice.js';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function ItemProduk(props) {
     const token = useSelector((state) => state.auth.token);
+    const cart = useSelector((state) => state.carts);
+    const [amount, setAmount] = useState(1);
 
     const dispatch = useDispatch();
     const navigate = useNavigate([]);
 
+    const data = {
+        id: props.id,
+        nama: props.namaproduk,
+        harga: props.hargaproduk,
+        gambar: props.image,
+        amount: amount,
+    };
+
     const handleSubmit = (event) => {
         event.stopPropagation();
         if (token !== '') {
-            const data = {
-                nama: `${props.namaproduk}`,
-                harga: `${props.hargaproduk}`,
-                gambar: `${props.image}`,
-                amount: 1,
-            };
             alert('Berhasil ditambah ke Cart');
             dispatch(addToCart(data));
+        } else {
+            alert('Silahkan Login Terlebih Dahulu');
+            navigate('/login');
         }
-        alert('Silahkan Login Terlebih Dahulu');
-        navigate('/login');
     };
 
     const handleGoToDetail = (id) => {
