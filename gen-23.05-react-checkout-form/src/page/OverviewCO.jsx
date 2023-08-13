@@ -1,10 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '../component/Button';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { checkoutCart } from '../store/cartSlice';
 
 export default function OverviewCO() {
     const cartItems = useSelector((state) => state.carts.cartItems);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const jasaPengiriman = 90;
     const biayaLayanan = 1000;
 
@@ -54,9 +57,14 @@ export default function OverviewCO() {
         {
             nama: 'Total Pembayaran',
             total: totalPriceFinal,
-            className: 'text-xl text-red-600 font-bold text-right p-2 mx-2',
+            className: 'text-2xl text-red-600 font-bold text-right p-2 mx-2',
         },
     ];
+
+    const handleCheckout = () => {
+        dispatch(checkoutCart());
+        navigate('/');
+    };
 
     return (
         <div>
@@ -179,7 +187,10 @@ export default function OverviewCO() {
                             </table>
                         </div>
                         <div>
-                            <Button className='bg-red-400 hover:bg-red-800 w-32'>
+                            <Button
+                                className='bg-red-400 hover:bg-red-800 w-32'
+                                onClick={handleCheckout}
+                            >
                                 Checkout
                             </Button>
                         </div>

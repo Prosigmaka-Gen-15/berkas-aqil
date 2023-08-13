@@ -38,6 +38,10 @@ const cartSlice =createSlice({
             // }else{
             //     state.cartItems[action.payload].amount
             // }
+        },
+        checkoutCart(state, action){
+            state.cartItems = []
+            alert('Pesnaan Berhasil Dibuat')
         }
     }
 })
@@ -45,4 +49,5 @@ export const { DecreaseAmount } = cartSlice.actions
 export const { increaseAmount } = cartSlice.actions
 export const { addToCart } = cartSlice.actions
 export const { deleteItemCart } = cartSlice.actions
+export const { checkoutCart } = cartSlice.actions
 export default cartSlice.reducer

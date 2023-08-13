@@ -10,6 +10,7 @@ import Login from './page/Login';
 import PrivateRoutes from './component/route/PrivateRoutes';
 import GuestRoute from './component/route/GuestRoute';
 import OverviewCO from './page/OverviewCO';
+import OverviewRoute from './component/route/OverviewRoute';
 
 function App() {
     return (
@@ -23,7 +24,9 @@ function App() {
                 </Route>
                 <Route element={<PrivateRoutes />}>
                     <Route path='/cart' element={<Cart />} />
-                    <Route path='/cart/overview' element={<OverviewCO />} />
+                    <Route element={<OverviewRoute />}>
+                        <Route path='/cart/overview' element={<OverviewCO />} />
+                    </Route>
                     <Route path='/admin' element={<Admin />} />
                     <Route
                         path='/admin/addproduct'
