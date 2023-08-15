@@ -94,7 +94,9 @@ export default function ListProduk() {
                                             {laptop.nama}
                                         </td>
                                         <td className='border-black border-2 p-2 text-sm'>
-                                            {laptop.harga}
+                                            {parseInt(
+                                                laptop.harga,
+                                            )?.toLocaleString()}
                                         </td>
                                         <td className='border-black border-2 p-2 text-sm'>
                                             {laptop.gambar}

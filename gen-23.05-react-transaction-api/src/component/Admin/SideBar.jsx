@@ -14,11 +14,11 @@ function SideBar() {
     const navigate = useNavigate();
 
     const menu = [
-        { name: 'Product', icon: <FaProductHunt />, link: '' },
+        { name: 'List Product', icon: <FaProductHunt />, link: '/admin' },
         {
             name: 'Riwayat Transaksi',
             icon: <BiHistory />,
-            link: 'riwayattransaksi',
+            link: '/admin/riwayattransaksi',
         },
         { name: 'Add Product', icon: <BsBagPlus />, link: '' },
         { name: 'About Us', icon: <FcAbout />, link: '' },

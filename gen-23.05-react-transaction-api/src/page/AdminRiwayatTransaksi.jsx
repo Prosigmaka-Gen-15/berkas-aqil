@@ -62,7 +62,9 @@ export default function AdminRiwayatTransaksi() {
                                                 {transaksi.totalItems}
                                             </td>
                                             <td className='border-black border-2 p-2 text-sm'>
-                                                {transaksi.totalPrice}
+                                                {parseInt(
+                                                    transaksi.totalPrice,
+                                                )?.toLocaleString()}
                                             </td>
                                             <td className='border-black border-2 p-2 text-sm'>
                                                 {transaksi.shipment}

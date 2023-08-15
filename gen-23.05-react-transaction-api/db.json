@@ -76,6 +76,14 @@
       "shipment": "JNE",
       "date": "2023-08-15T15:58:54.813Z",
       "id": 2
+    },
+    {
+      "userId": 2,
+      "totalItems": 7,
+      "totalPrice": 83232000,
+      "shipment": "SiCepat",
+      "date": "2023-08-15T16:04:51.955Z",
+      "id": 3
     }
   ]
 }
