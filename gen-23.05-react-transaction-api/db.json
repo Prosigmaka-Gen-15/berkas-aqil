@@ -1,0 +1,81 @@
+{
+  "users": [
+    {
+      "email": "prodemy2305@mail.com",
+      "password": "$2a$10$jctYB8MFzaI1yKH9pn6PgOAbux2GjrcgTA1Fuyvyw9KcDfHvarM76",
+      "username": "Prodemy Test",
+      "id": 1
+    },
+    {
+      "email": "aqil@mail.com",
+      "password": "$2a$10$OJvngWBlY86X4t5FS/MMqOJdiGSPnDl4YpJGNcXB4nfxYluX5chM2",
+      "username": "Prodemy Aqil",
+      "id": 2
+    }
+  ],
+  "laptop": [
+    {
+      "id": 1,
+      "nama": "Asus Vivobook 14x M1403",
+      "harga": "8500000",
+      "gambar": "/images/1.png",
+      "gambar1": "/images/2.png",
+      "gambar2": "/images/3.png",
+      "gambar3": "/images/4.png"
+    },
+    {
+      "id": 2,
+      "nama": "Asus Vivobook S14x OLED",
+      "harga": "12500000",
+      "gambar": "/images/Asus-Vivobook-S14.png",
+      "gambar1": "/images/Asus-Vivobook-S14-1.png",
+      "gambar2": "/images/Asus-Vivobook-S14-2.png",
+      "gambar3": "/images/Asus-Vivobook-S14-3.png"
+    },
+    {
+      "id": 3,
+      "nama": "Asus Vivobook S14 Flip",
+      "harga": "13800000",
+      "gambar": "/images/Asus-Vivobook-S14-Flip.png",
+      "gambar1": "/images/Asus-Vivobook-S14-Flip1.png",
+      "gambar2": "/images/Asus-Vivobook-S14-Flip2.png",
+      "gambar3": "/images/Asus-Vivobook-S14-Flip3.png"
+    },
+    {
+      "id": 4,
+      "nama": "Asus Zenbook 14 UM425UA",
+      "harga": "10200000",
+      "gambar": "/images/Zenbook-14-(UM425UA)-1.png",
+      "gambar1": "/images/Zenbook-14-(UM425UA)-2.png",
+      "gambar2": "/images/Zenbook-14-(UM425UA)-3.png",
+      "gambar3": "/images/Zenbook-14-(UM425UA)-4.png"
+    },
+    {
+      "id": 5,
+      "nama": "Asus Zenbook 14 Ultralight UX435",
+      "harga": "18999000",
+      "gambar": "/images/Zenbook-14-Ultralight-UX435-1.png",
+      "gambar1": "/images/Zenbook-14-Ultralight-UX435-2.png",
+      "gambar2": "/images/Zenbook-14-Ultralight-UX435-3.png",
+      "gambar3": "/images/Zenbook-14-Ultralight-UX435-4.png"
+    }
+  ],
+  "transaksi": [
+    {
+      "userId": 1,
+      "totalItems": 3,
+      "totalPrice": 37816500,
+      "shipment": "JNT",
+      "date": "2023-08-15T12:35:06.230Z",
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "totalItems": 2,
+      "totalPrice": 24011500,
+      "shipment": "JNE",
+      "date": "2023-08-15T15:58:54.813Z",
+      "id": 2
+    }
+  ]
+}
