@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Button from '../component/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkoutCart } from '../store/cartSlice';
+import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import { date } from 'yup';
 
@@ -12,6 +13,7 @@ export default function OverviewCO() {
     const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');
     const [selectedShipping, setSelectedShipping] = useState({});
     const [biayaLayanan, setBiayaLayanan] = useState(0);
+    const idTransaksi = uuidv4(); // ID transaksi
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -72,8 +74,17 @@ export default function OverviewCO() {
         },
     ];
 
+    const produkDiBeli = cartItems.map((item) => {
+        return {
+            productId: item.id,
+            amount: item.amount,
+            subTotal: item.amount * item.harga,
+        };
+    });
+
     const transaksi = {
         userId: user.id,
+        idTransaksi: idTransaksi,
         totalItems: totalProduk,
         totalPrice: totalPriceFinal,
         shipment: selectedShipping.nama,
@@ -81,9 +92,18 @@ export default function OverviewCO() {
         date: new Date().toISOString(),
     };
 
+    const detailTransaksi = {
+        idTransaksi: idTransaksi,
+        products: [produkDiBeli],
+    };
+
     const postCheckout = async () => {
         try {
             axios.post('http://localhost:3000/transaksi', transaksi);
+            axios.post(
+                'http://localhost:3000/detailTransaksi',
+                detailTransaksi,
+            );
         } catch (err) {
             console.log(err);
         }
