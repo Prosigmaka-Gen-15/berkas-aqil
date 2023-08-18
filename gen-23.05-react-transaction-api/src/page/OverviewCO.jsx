@@ -98,7 +98,7 @@ export default function OverviewCO() {
 
     const detailTransaksi = {
         idTransaksi: idTransaksi,
-        products: [produkDiBeli],
+        products: produkDiBeli,
     };
 
     const postCheckout = async () => {

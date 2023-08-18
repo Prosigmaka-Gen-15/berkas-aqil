@@ -106,6 +106,26 @@
         }
       ],
       "id": 1
+    },
+    {
+      "idTransaksi": "87222f3a-5d04-4d74-ae9c-7a237b2b6e8d",
+      "products": [
+        {
+          "productId": 2,
+          "productName": "Asus Vivobook S14x OLED",
+          "productPrice": "12500000",
+          "amount": 2,
+          "subTotal": 25000000
+        },
+        {
+          "productId": 4,
+          "productName": "Asus Zenbook 14 UM425UA",
+          "productPrice": "10200000",
+          "amount": 2,
+          "subTotal": 20400000
+        }
+      ],
+      "id": 2
     }
   ]
 }

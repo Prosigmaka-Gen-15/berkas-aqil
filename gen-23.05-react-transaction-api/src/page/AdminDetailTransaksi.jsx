@@ -91,40 +91,32 @@ export default function AdminDetailTransaksi() {
                             <tbody>
                                 {produk.map((products, index) => {
                                     return (
-                                        <>
-                                            {products.map((produks, index) => {
-                                                return (
-                                                    <tr key={index}>
-                                                        <td className='border-black border-2 p-2 text-sm text-center'>
-                                                            {index + 1}
-                                                        </td>
-                                                        <td className='border-black border-2 p-2 text-sm text-center'>
-                                                            {produks.productId}
-                                                        </td>
-                                                        <td className='border-black border-2 p-2 text-sm'>
-                                                            {
-                                                                produks.productName
-                                                            }
-                                                        </td>
-                                                        <td className='border-black border-2 p-2 text-sm'>
-                                                            Rp
-                                                            {parseInt(
-                                                                produks.productPrice,
-                                                            )?.toLocaleString()}
-                                                        </td>
-                                                        <td className='border-black border-2 p-2 text-sm text-center'>
-                                                            {produks.amount}
-                                                        </td>
-                                                        <td className='border-black border-2 p-2 text-sm'>
-                                                            Rp
-                                                            {parseInt(
-                                                                produks.subTotal,
-                                                            )?.toLocaleString()}
-                                                        </td>
-                                                    </tr>
-                                                );
-                                            })}
-                                        </>
+                                        <tr key={index}>
+                                            <td className='border-black border-2 p-2 text-sm text-center'>
+                                                {index + 1}
+                                            </td>
+                                            <td className='border-black border-2 p-2 text-sm text-center'>
+                                                {products.productId}
+                                            </td>
+                                            <td className='border-black border-2 p-2 text-sm'>
+                                                {products.productName}
+                                            </td>
+                                            <td className='border-black border-2 p-2 text-sm'>
+                                                Rp
+                                                {parseInt(
+                                                    products.productPrice,
+                                                )?.toLocaleString()}
+                                            </td>
+                                            <td className='border-black border-2 p-2 text-sm text-center'>
+                                                {products.amount}
+                                            </td>
+                                            <td className='border-black border-2 p-2 text-sm'>
+                                                Rp
+                                                {parseInt(
+                                                    products.subTotal,
+                                                )?.toLocaleString()}
+                                            </td>
+                                        </tr>
                                     );
                                 })}
                                 <tr>
