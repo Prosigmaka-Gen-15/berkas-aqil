@@ -77,6 +77,8 @@ export default function OverviewCO() {
     const produkDiBeli = cartItems.map((item) => {
         return {
             productId: item.id,
+            productName: item.nama,
+            productPrice: item.harga,
             amount: item.amount,
             subTotal: item.amount * item.harga,
         };
@@ -88,7 +90,9 @@ export default function OverviewCO() {
         totalItems: totalProduk,
         totalPrice: totalPriceFinal,
         shipment: selectedShipping.nama,
-        payment: selectedPaymentMethod.nama,
+        shipmentPrice: selectedShipping.harga,
+        payment: selectedPaymentMethod,
+        paymentAdmin: biayaLayanan,
         date: new Date().toISOString(),
     };
 

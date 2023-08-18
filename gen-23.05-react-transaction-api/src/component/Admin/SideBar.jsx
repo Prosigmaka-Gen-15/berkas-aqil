@@ -43,8 +43,8 @@ function SideBar() {
                 <div className='flex flex-col gap-5 mt-10'>
                     {menu.map((val, index) => {
                         return (
-                            <Link to={`${val.link}`}>
-                                <A key={index}>
+                            <Link key={index} to={`${val.link}`}>
+                                <A>
                                     {val.icon} {val.name}
                                 </A>
                             </Link>

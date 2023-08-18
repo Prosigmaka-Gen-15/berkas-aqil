@@ -12,6 +12,7 @@ import GuestRoute from './component/route/GuestRoute';
 import OverviewCO from './page/OverviewCO';
 import OverviewRoute from './component/route/OverviewRoute';
 import AdminRiwayatTransaksi from './page/AdminRiwayatTransaksi';
+import AdminDetailTransaksi from './page/AdminDetailTransaksi';
 
 function App() {
     return (
@@ -40,6 +41,10 @@ function App() {
                     <Route
                         path='/admin/riwayattransaksi'
                         element={<AdminRiwayatTransaksi />}
+                    />
+                    <Route
+                        path='/admin/riwayattransaksi/:id'
+                        element={<AdminDetailTransaksi />}
                     />
                 </Route>
             </Routes>

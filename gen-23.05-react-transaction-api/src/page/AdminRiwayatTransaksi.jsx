@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import SideBar from '../component/Admin/SideBar';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import Button from '../component/Button';
 
 export default function AdminRiwayatTransaksi() {
     const [transaction, setTransaction] = useState([]);
@@ -10,6 +12,7 @@ export default function AdminRiwayatTransaksi() {
         try {
             let response = await axios.get('http://localhost:3000/transaksi');
             setTransaction(response.data);
+            // console.log(response.data);
         } catch (err) {
             console.log(err);
         }
@@ -49,10 +52,14 @@ export default function AdminRiwayatTransaksi() {
                                     <th className='border-black border-2 p-2 text-sm'>
                                         Transaction ID
                                     </th>
+                                    <th className='border-black border-2 p-2 text-sm'>
+                                        Option
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {transaction.map((transaksi, index) => {
+                                    // console.log(transaction);
                                     return (
                                         <tr key={index}>
                                             <td className='border-black border-2 p-2 text-sm'>
@@ -62,6 +69,7 @@ export default function AdminRiwayatTransaksi() {
                                                 {transaksi.totalItems}
                                             </td>
                                             <td className='border-black border-2 p-2 text-sm'>
+                                                Rp
                                                 {parseInt(
                                                     transaksi.totalPrice,
                                                 )?.toLocaleString()}
@@ -73,7 +81,19 @@ export default function AdminRiwayatTransaksi() {
                                                 {transaksi.date}
                                             </td>
                                             <td className='border-black border-2 p-2 text-sm gap-2 '>
-                                                {transaksi.id}
+                                                {transaksi.idTransaksi}
+                                            </td>
+                                            <td className='border-black border-2 p-2 text-sm gap-2 '>
+                                                <Link
+                                                    to={
+                                                        '/admin/riwayattransaksi/' +
+                                                        transaksi.id
+                                                    }
+                                                >
+                                                    <Button className='flex flex-row gap-1 items-center'>
+                                                        Details
+                                                    </Button>
+                                                </Link>
                                             </td>
                                         </tr>
                                     );

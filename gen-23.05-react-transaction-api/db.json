@@ -60,6 +60,90 @@
       "gambar3": "/images/Zenbook-14-Ultralight-UX435-4.png"
     }
   ],
-  "transaksi": [],
-  "detailTransaksi": []
+  "transaksi": [
+    {
+      "userId": 1,
+      "idTransaksi": "b72cd45d-57dc-4f55-8993-c4e2d2fb8375",
+      "totalItems": 5,
+      "totalPrice": 64010500,
+      "shipment": "JNE",
+      "shipmentPrice": 10000,
+      "payment": "COD (Cash Or Duel)",
+      "paymentAdmin": 1500,
+      "date": "2023-08-18T09:01:14.446Z",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "idTransaksi": "1f817b0d-1015-4337-9464-f6edb75d4904",
+      "totalItems": 2,
+      "totalPrice": 25016500,
+      "shipment": "JNT",
+      "shipmentPrice": 10500,
+      "payment": "Bank BNI",
+      "paymentAdmin": 6000,
+      "date": "2023-08-18T09:03:00.314Z",
+      "id": 2
+    }
+  ],
+  "detailTransaksi": [
+    {
+      "idTransaksi": "b72cd45d-57dc-4f55-8993-c4e2d2fb8375",
+      "products": [
+        [
+          {
+            "productId": 2,
+            "productName": "Asus Vivobook S14x OLED",
+            "productPrice": "12500000",
+            "amount": 1,
+            "subTotal": 12500000
+          },
+          {
+            "productId": 3,
+            "productName": "Asus Vivobook S14 Flip",
+            "productPrice": "13800000",
+            "amount": 1,
+            "subTotal": 13800000
+          },
+          {
+            "productId": 4,
+            "productName": "Asus Zenbook 14 UM425UA",
+            "productPrice": "10200000",
+            "amount": 1,
+            "subTotal": 10200000
+          },
+          {
+            "productId": 5,
+            "productName": "Asus Zenbook 14 Ultralight UX435",
+            "productPrice": "18999000",
+            "amount": 1,
+            "subTotal": 18999000
+          },
+          {
+            "productId": 1,
+            "productName": "Asus Vivobook 14x M1403",
+            "productPrice": "8500000",
+            "amount": 1,
+            "subTotal": 8500000
+          }
+        ]
+      ],
+      "id": 1
+    },
+    {
+      "idTransaksi": "1f817b0d-1015-4337-9464-f6edb75d4904",
+      "products": [
+        [
+          {
+            "productId": 2,
+            "productName": "Asus Vivobook S14x OLED",
+            "productPrice": "12500000",
+            "amount": 2,
+            "subTotal": 25000000
+          }
+        ]
+      ],
+      "id": 2
+    }
+  ]
 }
