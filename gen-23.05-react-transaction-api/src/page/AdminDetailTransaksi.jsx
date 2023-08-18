@@ -14,6 +14,7 @@ export default function AdminDetailTransaksi() {
         { nama: 'Id Transaksi', isi: transaksi.idTransaksi },
         { nama: 'Total Barang', isi: transaksi.totalItems },
         { nama: 'Pengiriman', isi: transaksi.shipment },
+        { nama: 'Pembayaran', isi: transaksi.payment },
         { nama: 'Tanggal Pemesanan', isi: transaksi.date },
     ];
 
@@ -127,7 +128,10 @@ export default function AdminDetailTransaksi() {
                                         Biaya Pengiriman
                                     </td>
                                     <td className='border-black border-2 p-2 text-sm'>
-                                        Rp{transaksi.shipmentPrice}
+                                        Rp
+                                        {parseInt(
+                                            transaksi.shipmentPrice,
+                                        )?.toLocaleString()}
                                     </td>
                                 </tr>
                                 <tr>
@@ -138,7 +142,10 @@ export default function AdminDetailTransaksi() {
                                         Biaya Admin
                                     </td>
                                     <td className='border-black border-2 p-2 text-sm'>
-                                        Rp{transaksi.paymentAdmin}
+                                        Rp
+                                        {parseInt(
+                                            transaksi.paymentAdmin,
+                                        )?.toLocaleString()}
                                     </td>
                                 </tr>
                                 <tr>
